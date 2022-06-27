@@ -16,4 +16,5 @@ We added those functionalities:
 
 All those features reappear every five seconds at random locations in the map.
 
+![image](https://user-images.githubusercontent.com/73739848/175929454-2a41315f-f176-47c0-9897-484d8e33bfe2.png)
 

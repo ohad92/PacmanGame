@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css"  href="style.css" /> 
+		<script src="./jquery-3.4.1.slim.min.js"></script>
+		<script src="./jquery.validate.min.js"></script>
+		<script type="text/javascript" src="./app.js"></script>
+	</head>
+		
+		
+	<body>
+		<header class="header">
+			<img src="images/logo.png" />
+			<label id="headerinfo2"> Ronen Aranovich 314983438, Ohad Shriki 203665401</label>
+		</header>
+		<!-- Menu-->
+		<div class="tab">
+			<button class="tablinks" onclick="showPage('Welcome');">Welcome</button>
+			<button class="tablinks" onclick="showPage('Register');">Register</button>
+			<button class="tablinks" onclick="showPage('Login');">Login</button>
+			<button class="tablinks" onclick="AboutDialogFunction()">About</button>
+			<!-- <button class="tablinks" onclick="stopgame(); menuToggleable(event, 'Welcome'); ">Welcome</button>
+			<button class="tablinks" onclick="stopgame(); menuToggleable(event, 'Register');">Register</button>
+			<button class="tablinks" onclick="stopgame(); menuToggleable(event, 'Login');">Login</button>
+			<button class="tablinks" onclick="AboutDialogFunction()">About</button> -->
+			<!-- <button class="tablinks" onclick="menuToggleable(event, 'Game')">Game</button> -->
+		</div>
+		  
+		<br>
+		
+    	<!-- Welcome-->
+		<div id="Welcome" class="tabcontent">
+			<div class="Welcometab">
+				<img class="center" src="images/coolgif.gif">
+			</br>
+				<button class="registerbtn" onclick="menuToggleable(event, 'Register')">Register</button><br>
+				<button class="registerbtn" onclick="menuToggleable(event, 'Login')">Login</button>
+			</div>
+		</div>
+		
+
+		<!-- Register-->
+		<div id="Register" class="tabcontent">
+			<form id="RegisterForm">
+				<div class="container">
+				   <h1>Register</h1>
+				  <input type="text" placeholder="Enter UserName" name="UserName" id="UserName" onchange={this.handleChange}>
+				  <input type="password" placeholder="Enter Password" name="password" id="password">
+				  <input type="text" placeholder="Full Name" name="fullname" id="fullname">
+				  <input type="text" placeholder="Enter Email" name="email" id="email"><br>
+				  <center><input type="date" id="birthDate" name="birthDate"><br></center><br>
+				  <button type="submit" id="registerbutton" class="registerbtn">Register</button>
+				</div>
+			</form>
+		</div>
+		
+
+		<!-- Login-->
+		<div id="Login" class="tabcontent">
+			<form id="LoginForm">
+				<div class="container">
+				  <h1>Login</h1>
+				  <input type="text" placeholder="Enter UserName" name="UserNameLogin" id="UserNameLogin">
+				  <input type="password" placeholder="Enter Password" name="passwordLogin" id="passwordLogin">
+				  <button type="submit" id="loginbutton" class="registerbtn">Login</button>
+				</div>
+			</form>
+		</div>
+
+		
+		<!-- About-->
+		<dialog id="AboutDialog" class="AboutDialog">
+			<span id="closeDialogButton" onclick="AboutDialogFunction2()">&times;</span>
+
+			<table id="AboutDialogTable">
+				<tr>
+					<td>Ronen Aranovich 314983438, Ohad Shriki 203665401</td>
+				</tr>
+				<tr>
+					<td>jQuery Plugin Use: jquery.validate.min</td>
+				</tr>
+				<tr>
+					<td>Template Use: None</td>
+				</tr>
+				<tr>
+					<td>Difficults: Lack of time</td>
+				</tr>
+			</table>
+
+		</dialog>
+
+
+
+		<!--Game-->
+		<div id="Game" class="tabcontent">
+			<div class="container">
+				<table width="100%">
+					<tr>
+						<td>
+							<center>	
+							<label class="labelsInformation">User Name:</label>
+							<input class="labelsInformation" id="valueUSERNAME" size="4" readonly="readonly"/>
+							</center>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%"><center>	
+							<div id="gameinfo">
+								<label class="labelsInformation">Score:</label>
+								<input class="labelsInformation" id="lblScore" size="1"/>
+								<label class="labelsInformation">Time:</label>
+								<input class="labelsInformation" id="lblGameTimer" size="1"/>
+								<label class="labelsInformation">Lives:</label>
+								<input class="labelsInformation" id="lblLives" size="1"/>
+							</div>
+							
+							<canvas id="canvas" height="600" width="600"></canvas>
+
+						</center>
+						</td>
+						<td width="50%">
+							<h1>
+								<label class="labelsInformation">UP button:</label>
+								<input id="valueUP" name="valueUP" readonly="readonly"><br>
+								<label class="labelsInformation">DOWN button:</label>
+								<input id="valueDOWN" name="valueDOWN" readonly="readonly"><br>
+								<label class="labelsInformation">LEFT button:</label>
+								<input id="valueLEFT" name="valueLEFT" readonly="readonly"><br>
+								<label class="labelsInformation">RIGHT button:</label>
+								<input id="valueRIGHT" name="valueRIGHT" readonly="readonly"><br>
+
+								<label class="labelsInformation">Balls Amount:</label>
+								<input id="valueBalls" name="valueBalls" readonly="readonly"><br>
+
+								<label class="labelsInformation">color for 5 points balls:</label>
+								<input id="valuecolor5Balls" name="valuecolor5Balls" type="color" readonly="readonly"><br>
+								<label class="labelsInformation">color for 15 points balls:</label>
+								<input id="valuecolor15Balls" name="valuecolor15Balls" type="color" readonly="readonly"><br>
+								<label class="labelsInformation">color for 25 points balls:</label>
+								<input id="valuecolor25Balls" name="valuecolor25Balls" type="color" readonly="readonly"><br>
+
+								<label class="labelsInformation">time for game:</label>
+								<input id="valueTIME" name="valueTIME" readonly="readonly"><br>
+								<label class="labelsInformation">Monsters on board:</label>
+								<input id="valueMONSTERS" name="valueMONSTERS" readonly="readonly"><br>
+								<button id="startgame" name="startgame" class="startnewgamebutton" type="submit" onclick="startnewgame();stopmusic()">start new game</button>
+								<button id="startmusic" name="startmusic" class="startnewgamebutton" type="submit" onclick="startmusic()">start music</button>
+								<button id="stopmusic" name="stopmusic" class="startnewgamebutton" type="submit" onclick="stopmusic()">pause music</button>
+							</h1>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+
+		<!--Settings-->
+		<div id="Settings" class="tabcontent">
+			<div class="container">
+				<h1>Settings</h1>
+				<form id="SettingsForm">
+					<center><div class="settings">
+						<label class="labelsInformation">Choose UP button:</label>
+						<input onkeypress="javascript:return false;" id="up" onkeydown="displayKeyCode(event,'up')" name="up"><br>
+						<label class="labelsInformation">Choose DOWN button:</label>
+						<input onkeypress="javascript:return false;" id="down" onkeydown="displayKeyCode(event,'down')" name="down"><br>
+						<label class="labelsInformation">Choose LEFT button:</label>
+						<input onkeypress="javascript:return false;" id="left" onkeydown="displayKeyCode(event,'left')" name="left"><br>
+						<label class="labelsInformation">Choose RIGHT button:</label>
+						<input onkeypress="javascript:return false;" id="right" onkeydown="displayKeyCode(event,'right')" name="right">&nbsp;&nbsp;&nbsp;<span id="spnCode" name="spnCode"></span>
+						<h2>HOW MANY BALLS?</h2>
+						<input class="center" id="ballsamountset" name="ballsamountset" type="range" min="50" max="90" step="1" oninput="ballsamount(this.value)"><br>
+						<input type="text" id="balls_amount" value="70" readonly="readonly">
+						<label class="labelsInformation">choose color for 5 points balls:</label>
+						<input class="coloredsettings" type="color" id="ballcolor5" value = "#FF0000" onclick="foodcolors('5')"/><br>
+						<label class="labelsInformation">choose color for 15 points balls:</label>
+						<input class="coloredsettings" type="color" id="ballcolor15" value = "#00FF00" onclick="foodcolors('15')"/><br>
+						<label class="labelsInformation">choose color for 25 points balls:</label>
+						<input class="coloredsettings" type="color" id="ballcolor25" value = "#0000FF" onclick="foodcolors('25')"/><br>
+						<label class="labelsInformation">choose time for game (in seconds)</label>
+						<input class="labelsInformation" id="timeforgame" name="timeforgame" type="number"/><br>
+						<h2>choose how many monsters: (Min:1  Max:4)</h2>
+						<input class="center" id="monstersamount" name="monstersamount" type="number"/><br>
+						<button id="randomsettings" name="randomsettings" class="registerbtn" type="button" onclick="selectrandomsettings()">select random settings</button><br>
+						<button id="startgame" name="startgame" class="registerbtn" type="submit" onclick="startnewgame()">start game</button>
+					</div></center>
+				</form>
+			</div>
+		</div>
+
+		<footer class = "footer">
+			<table id="footerinformation">
+				<tr>
+					<td>date of creation:</td>
+					<td>April 28th 2021</td>
+				</tr>
+				<tr>
+					<td>Languages used:</td>
+					<td>JavaScript, Html, Jquery</td>
+				</tr>
+				<tr>
+					<td>Contact Us:</td>
+					<td><a href="mailto:ronenara@post.bgu.ac.il">ronenara@post.bgu.ac.il</a>, <a href="mailto:ohadshr@post.bgu.ac.il">ohadshr@post.bgu.ac.il</a></td>
+				</tr>
+			</table>
+		</footer>
+	</body>
+</html>
+

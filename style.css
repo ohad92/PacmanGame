@@ -1,0 +1,286 @@
+/* body{
+	background-image: url("background.jpg");
+	background-position: inherit;
+	background-size: cover;
+} */
+
+body {
+  background: url(images/background.jpg) no-repeat center center fixed;
+  background-size: 100% 100%
+}
+
+
+
+.header{
+  display: block;
+  width: 100%;
+  background-color: rgb(21, 6, 110);
+  }
+
+.header #headerinfo{
+  font-family: 'Comic Sans MS';
+  font-size: 30px;
+  color: white;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+.header #headerinfo2{
+  font-family: 'Comic Sans MS';
+  font-size: 30px;
+  float:right;
+  color: white;
+  margin-top: 1.5%;
+}
+
+.footer {
+  position:relative;
+  display: block;
+  width:100%;
+  height:85px;   /* Height of the footer */
+  background: rgb(21, 6, 110);
+}
+.footer #footerinformation{
+  font-family: 'Comic Sans MS';
+  font-size: 15px;
+  float:left;
+  color: white;
+
+}
+
+
+h1 {
+  border: 1px solid rgb(231, 215, 215);
+	overflow: hidden;
+  background-color: #0f0783a6;
+  text-align: center;
+
+}
+
+h2 {
+  /* border: 1px solid rgb(231, 215, 215); */
+	overflow: hidden;
+  /* background-color:rgb(12, 155, 12); */
+  /* text-align: center; */
+  width: 100%;
+  display: block;
+  margin-left: auto;
+	margin-right: auto;
+}
+
+/* menu style*/
+/* Style the tab */
+.tab {
+	overflow: hidden;
+	/* border: 1px solid rgb(231, 215, 215); */
+	background-color: #c23636;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+	font-family: 'Comic Sans MS';
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+	background-color: rgb(49, 52, 219);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+	background-color: rgb(9, 158, 71);
+}
+
+/* Style the tab content */
+.tabcontent {
+	display: none;
+	padding: 6px 12px;
+	border: 10px solid rgb(12, 155, 12);
+  background-color: white;
+  background-size: cover;
+
+}
+   
+
+/* buttons on Welcome section */
+.button1 {
+font-family: 'Comic Sans MS';
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #c23636;
+  border: none;
+  color: #080c08;
+  text-align: center;
+  font-size: 50px;
+  padding: 30px;
+  width: 400px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  right: 30px;
+
+}
+.button1:hover {
+	background-color: rgb(49, 52, 219);
+}
+
+
+/* Welcome menu gif to be on center */
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100% 100%;
+  /* background-size: 100% 100% */
+  }
+
+/* welcome tab background*/
+  .Welcometab {
+	overflow: hidden;
+	border: 1px solid rgb(231, 215, 215);
+	background-image: url("images/background2.jpg");
+	background-size: cover;
+
+}
+
+* {box-sizing: content-box}
+.settings{
+  padding: 16px;
+  color: white;
+  font-family: 'Comic Sans MS';
+	border: 1px solid rgb(231, 215, 215);
+  background-color: rgb(25, 161, 143);
+  width: 40%;
+}
+* {box-sizing: border-box}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  color: white;
+  font-family: 'Comic Sans MS';
+	border: 1px solid rgb(231, 215, 215);
+	background-image: url("images/background2.jpg");
+	background-size: cover;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  
+  width: 40%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: black;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 40%;
+  opacity: 0.9;
+  margin-left: 20;
+  display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+
+/* this print the box of input in red in case of error */
+input.error {
+  border: 1px dashed red;
+  font-weight: 300;
+  color: red;
+}
+
+/* this print the error message under the box of input in red in case of error */
+.error {
+  color: red;
+  font-size: 20px;
+  /* background-color:black; */
+  text-align: center;
+  display: block;
+
+}
+
+.labelsInformation{
+  font-weight: bold;
+  color: rgb(57, 223, 23);
+  font-size: 30px;
+}
+
+.coloredsettings{
+	width: 15%;
+}
+#closeDialogButton{
+  font-size: 50px;
+  float: right;
+  font-weight: bold;
+  color: rgb(42, 253, 0);
+
+}
+
+.AboutDialog{
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  background-color: #3713da;
+  display: none;
+
+}
+
+.startnewgamebutton {
+  background-color: #4CAF50;
+  color: black;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  /* margin-left: 20;
+	margin-left: auto;
+	margin-right: auto; */
+}
+
+.startnewgamebutton:hover {
+  opacity:1;
+}

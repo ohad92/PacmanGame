@@ -1,4 +1,4 @@
-# Assignment2
+# Pacman Game - Assignment2
  
 Link: https://web-development-environments-2021.github.io/Assignment2_314983438_203665401/
 
